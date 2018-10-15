@@ -11,10 +11,10 @@ let x2 = 0;
 let y2 = -1;
 let x3 = -2;
 let y3 = 5;
-let s1 = Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
-let s2 = Math.sqrt((x3-x1)*(x3-x1) + (y3-y1)*(y3-y1));
-let s3 = Math.sqrt((x3-x2)*(x3-x2) + (y3-y2)*(y3-y2));
-if ((s1*s1+s2*s2 == s3*s3) || (s1*s1+s3*s3 == s2*s2) || (s3*s3+s2*s2 == s1*s1)) {
+let s1 = (x2-x1)*(x2-x1) + (y2-y1)*(y2-y1);
+let s2 = (x3-x1)*(x3-x1) + (y3-y1)*(y3-y1);
+let s3 = (x3-x2)*(x3-x2) + (y3-y2)*(y3-y2);
+if ((s1+s2 == s3) || (s1+s3 == s2) || (s3+s2 == s1)) {
     console.log("Треугольник является прямоугольным")
 }
 else {
@@ -108,7 +108,7 @@ if (plates==0) {
     console.log("Oсталось",wash, "моющего средства");
 }
 else {
-    console.log("Oсталось",plates, "тарелок");
+    console.log("Oсталось",plates, "невымытых тарелок");
 }
 
 /*
