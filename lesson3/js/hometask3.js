@@ -79,14 +79,14 @@ console.log("После изменения 1-го эл-та массива-ко�
 console.log("Задание 4");
 let sum = 0;
 function sumFromNtoM(n, m) {
-    if (n<=m) {
-        sum +=n;
-        sum = sumFromNtoM(n+1, m);
+    if (n==m) {
+        return m;
     }
-    return sum;
+    return n+sumFromNtoM(n+1, m);
 }
 
 console.log(sumFromNtoM(-5, 5));
+console.log(sumFromNtoM(0, 5));
 
 /*Задача 5
 Написать функцию, которая возвращает новую функцию,
