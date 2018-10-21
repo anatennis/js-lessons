@@ -1,0 +1,32 @@
+.border {box-sizing: border-box}
+
+.clock {
+    background-color: skyblue;
+    border-radius: 10px;
+    font-family: "Arial Narrow";
+    display: inline-block;
+    padding: 10px;
+    font-size: x-large;
+}
+
+.table {
+    border: solid 1px black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    float: left;
+}
+
+.tableM {
+    border: solid 1px black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    float: left;
+    clear: left;
+    background-color: #b3d4fc;
+}
+
+.tab {
+    margin: 20px;
+}
