@@ -5,20 +5,24 @@
 Значение N  получаем от пользователя.
     Например, поле 4 x 4
 */
-function genField() {
-    let n = prompt("Введите размерность поля");
-    for (i=0; i<n; i++) {
-        for (j=0; j<n; j++) {
-        let div1 = document.createElement("div");
-        if (j!=(n-1)) {div1.classList.add("table");}
-        else {div1.classList.add("tableM");}
-        document.body.appendChild(div1);
-        }
+
+
+function genField(n) {
+
+    let field = document.getElementById('field');
+    for (i=0; i<n*n; i++) {
+        let cell = document.createElement("div");
+        cell.style.height = field.offsetWidth/n + "px";
+        cell.style.width = field.offsetHeight/n + "px";
+        cell.classList.add("border");
+        cell.classList.add("cells");
+        field.appendChild(cell);
     }
 }
 
+let n = prompt("Введите размерность поля");
+genField(n);
 
-genField();
 
 /*
 Задача 2

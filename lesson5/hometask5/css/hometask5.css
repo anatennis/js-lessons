@@ -1,4 +1,16 @@
-.border {box-sizing: border-box}
+.border {
+    border: 1px solid black
+}
+
+.fields {
+    height: 600px;
+    width: 600px;
+}
+
+.cells {
+    box-sizing: border-box;
+    float: left;
+}
 
 .clock {
     background-color: skyblue;
@@ -7,6 +19,7 @@
     display: inline-block;
     padding: 10px;
     font-size: x-large;
+    margin-top: 10px;
 }
 
 .table {
