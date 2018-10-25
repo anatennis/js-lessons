@@ -11,7 +11,11 @@ showb.addEventListener('click', showDiv);
 
 function showDiv(event) {
     let showdiv = document.getElementById('surp');
-    showdiv.style.display = "block";
+    if (event.target.checked) {showdiv.style.display = "block";}
+    else
+    {
+        showdiv.style.display = "none";
+    }
 }
 
 /*
@@ -28,6 +32,9 @@ function sendC(event) {
     if (sendCom.value[0]=='S') {
         sendCom.value = "Write new comment";
         txtar.style.display = 'none';
+        /*let div = document.createElement(div);
+        div.classList.add('realComSt');
+        div.innerHTML = document.getElementById('comment').value;*/
         document.getElementById('realCom').innerHTML =  document.getElementById('comment').value;
         document.getElementById('realCom').classList.add('realComSt');
     }
