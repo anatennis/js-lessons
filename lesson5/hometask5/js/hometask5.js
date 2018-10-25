@@ -23,7 +23,15 @@ function genField(n) {
 let n = prompt("Введите размерность поля");
 genField(n);
 
+function generatePrize(field, prizeCount) {
+    for (i=0; i<prizeCount; i) {
+        field.children[Math.round(getRandom(0, field.children.length))].setAttribute("data-ptize", ":)");
+    }
+}
 
+function getRandom(min, max) {
+    return Math.random()*(max - min) + min;
+}
 /*
 Задача 2
 Написать программу, которая выводит текущее время в html и обновляет значения каждую секунду.
@@ -72,17 +80,84 @@ function createUserArr() {
 
 //console.log(users);
 
+
+
 function createTable (usersData) {
     let tab = document.getElementById ('uTable');
     tab.classList.add('tab');
+
     for (i = 0; i < usersData.length; i++)
     {
-        let trow =  tab.insertRow (-1);
+
+        trow =  tab.insertRow (-1);
+
         for (key in usersData[i]) {
-            let cell = trow.insertCell (-1);
+            cell = trow.insertCell (-1);
             cell.innerHTML = usersData[i][key];
         }
     }
+
 }
 
 createTable(users);
+
+
+
+/*Lesson6 - Задача 3
+Написать программу, которая будет осуществлять сортировку строк таблицы
+из задачи 3 (предыдущего дз) по значениям столбца
+по нажатию на название этого столбца.*/
+let usersTab = document.getElementById ('uTable');
+console.log(usersTab);
+usersTab.addEventListener("click", sortTab);
+
+function sortTab(event) {
+    if (event.tagName == "th")
+    {
+        return;
+    }
+
+    console.log(event.target.cellIndex, event.target.getAttribute('data-type'));
+    sortt(event.target.cellIndex, event.target.getAttribute('data-type'));
+
+}
+
+
+
+function sortt(colNum, type) {
+    var tbody = usersTab.getElementsByTagName('tbody')[0];
+console.log(tbody);
+    // Составить массив из TR
+    var rowsArray = [].slice.call(tbody.rows);
+
+    // определить функцию сравнения, в зависимости от типа
+    var compare;
+
+    switch (type) {
+        case 'number':
+            compare = function(rowA, rowB) {
+                return rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML;
+            };
+            break;
+        case 'string':
+            compare = function(rowA, rowB) {
+                return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML;
+            };
+            break;
+    }
+
+    // сортировать
+    rowsArray.sort(compare);
+
+    // Убрать tbody из большого DOM документа для лучшей производительности
+    usersTab.removeChild(tbody);
+
+    // добавить результат в нужном порядке в TBODY
+    // они автоматически будут убраны со старых мест и вставлены в правильном порядке
+    for (var i = 0; i < rowsArray.length; i++) {
+        tbody.appendChild(rowsArray[i]);
+    }
+
+    usersTab.appendChild(tbody);
+
+}
