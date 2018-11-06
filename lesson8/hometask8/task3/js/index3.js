@@ -1,8 +1,10 @@
 let garden = new Garden();
+console.log(garden.getCountTrees());
+console.log(garden.getCounApples());
 console.log(garden);
-console.log(garden._trees[0]._apples[0]);
-/*console.log(garden.getCountTrees());
-console.log(garden.getCounApples());*/
+/*/!*console.log(garden._trees[0]._apples[0]);*!/
+/!*console.log(garden.getCountTrees());*/
+console.log(garden.getCounApples());
 garden.passDay(); // прошли одни сутки
 console.log(garden);
 garden.passDay(); // прошли одни сутки

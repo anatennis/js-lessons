@@ -11,6 +11,7 @@
 class Apple {
     constructor() {
         this._age = Math.floor(Math.random() * (30 - 1)) + 1;
+        /*console.log(this._age);*/
         this._color = "red";
         this._size = 3;
         this._bad = 0;
@@ -19,6 +20,7 @@ class Apple {
 
     fallFromTree() {
         this._fall = 1;
+        this._age+=1;
     }
 
     spoil() {
@@ -35,7 +37,6 @@ class Apple {
 
     apGettingOld() {
         this._age+=1;
-        console.log('прошел день z,kjrf');
     }
 
 }

@@ -27,5 +27,6 @@ class Garden {
 
     getCountTrees() {
         return this._trees.length;
+        console.log(this._trees.length);
     }
 }

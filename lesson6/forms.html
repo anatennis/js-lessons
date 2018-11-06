@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<body>
+<!-- контейнер для элементов формы -->
+<form action="#" method="post" name="lesson6" >
+    <!-- action - путь до обработчика формы -->
+    <!--autocomplete="on | off"-->
+    <!--enctype="multipart/form-data"-->
+    <!--name="" - имя формы-->
+
+    <!-- группировка элементов формы -->
+    <fieldset> <!-- рамка -->
+        <!--disabled -->
+        <legend>Название группы элементов</legend>
+        <!-- создание полей формы -->
+        <div>
+            <label for="login">Login</label>
+            <input id="login" type="text" value="val">
+        </div>
+        <div>
+            <label for="email">Поле для ввода email</label>
+            <input id="email" type="email">
+        </div>
+        <div>
+            <label for="url">Поле для ввода URL</label>
+            <input id="url" type="url">
+        </div>
+        <div>
+            <label for="pwd">Поле для ввода пароля</label>
+            <input id="pwd" type="password">
+        </div>
+        <div>
+            <label for="search">Поле для поиска</label>
+            <input id="search" type="search">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Переключатели</legend>
+        <fieldset>
+            <legend>Одиночные радио кнопки</legend>
+            <label><input type="radio">Вариант 1</label>
+            <label><input type="radio">Еще вариант</label>
+        </fieldset>
+        <fieldset>
+            <legend>Радио группа</legend>
+            <label><input name="some_name" type="radio">Вариант 1</label>
+            <label><input name="some_name" type="radio">Вариант 2</label>
+            <label><input name="some_name" type="radio">Вариант 3</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Одиночные флажки</legend>
+            <label><input type="oneCheckbox">Вариант 1</label>
+            <label><input type="checkbox">Еще вариант</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Группа флажков</legend>
+            <label><input checked name="some_name[]" type="checkbox">Вариант 1</label>
+            <label><input name="some_name[]" type="checkbox">Вариант 2</label>
+            <label><input name="some_name[]" type="checkbox">Вариант 3</label>
+        </fieldset>
+    </fieldset>
+
+    <fieldset>
+        <legend>Ввод чисел</legend>
+        <div>
+            <label for="num">Ввод чисел</label>
+            <input min="2" max="90" step="2" id="num" type="number">
+        </div>
+
+        <div>
+            <label for="range">Ползунок</label>
+            <input min="2" max="90" step="2" id="range" type="range">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Загрузка файлов</legend>
+        <div>
+            <label for="file">Один файл любого типа</label>
+            <input id="file" type="file">
+        </div>
+
+        <div>
+            <label for="multiFile">Несколько файлов любого типа</label>
+            <input id="multiFile" type="file" multiple>
+        </div>
+
+        <div>
+            <label for="imgFile">Только изображения</label>
+            <input id="imgFile" type="file" accept="image/*">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Кнопки</legend>
+        <input type="button" value="Button">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <input type="image" src="#" alt="imgButton">
+    </fieldset>
+
+    <fieldset>
+        <legend>Кнопки тег &lt;button&gt;</legend>
+        <button type="reset">
+            <strong><em>Кнопка</em></strong>
+        </button>
+        <!-- type="reset | button | submit" -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Многострочное текстовое поле</legend>
+        <label for="textarea">Textarea</label>
+        <textarea id="textarea" placeholder="текст-подсказка"
+                  cols="20" rows="4" minlength="7" maxlength="30">Значение</textarea>
+        <!--resize: none-->
+        <!--autofocus-->
+        <!--readonly-->
+        <!--disabled-->
+        <!--required-->
+    </fieldset>
+
+    <fieldset>
+        <legend>Поле со списком</legend>
+        <!-- раскрывающийся список -->
+        <select id="select" size="2">
+            <option label="i1" value="1">item 1</option>
+            <option selected value="2">item 2</option>
+            <option value="3">item 3</option>
+            <option value="4">item 4</option>
+            <option value="5">item 5</option>
+        </select>
+
+        <select>
+            <optgroup disabled label="Группа 1">
+                <option value="1">item 1</option>
+                <option selected value="2">item 2</option>
+                <option value="3">item 3</option>
+                <option value="4">item 4</option>
+            </optgroup>
+            <optgroup label="Группа 2">
+                <option value="5">item 1</option>
+                <option value="5">item 2</option>
+                <option value="5">item 3</option>
+                <option value="5">item 4</option>
+            </optgroup>
+
+
+        </select>
+    </fieldset>
+
+    <div>
+        <input type="submit" value="Button">
+    </div>
+
+</form>
+
+
+<script src="js/forms.js"></script>
+</body>
+</html>

@@ -89,10 +89,10 @@ function createTable (usersData) {
     for (i = 0; i < usersData.length; i++)
     {
 
-        trow =  tab.insertRow (-1);
+        trow =  tab.insertRow ();
 
         for (key in usersData[i]) {
-            cell = trow.insertCell (-1);
+            let cell = trow.insertCell ();
             cell.innerHTML = usersData[i][key];
         }
     }

@@ -1,0 +1,12 @@
+.slider {
+    height: 60vh;
+}
+
+.slider img {
+    display: none;
+}
+
+.slider img.active {
+    display: block;
+}
+

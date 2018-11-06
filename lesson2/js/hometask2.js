@@ -33,15 +33,15 @@ if (monthNum==11 || monthNum<=1) {
     console.log('Winter is now')
 }
 else
-    if (monthNum<5 & monthNum>1) {
+    if (monthNum<5 && monthNum>1) {
         console.log('Spring is now')
     }
     else
-    if (monthNum<8 & monthNum>5) {
+    if (monthNum<8 && monthNum>4) {
         console.log('Summer is now')
     }
     else
-    if (monthNum<11 & monthNum>8) {
+    if (monthNum<11 && monthNum>8) {
         console.log('Autumn is now')
     }
 
@@ -98,7 +98,7 @@ let plates = 8;
 let wash = 9.0;
 let x = 1;
 
-while (plates!=0 & wash!=0) {
+while (!plates & !wash) {
     plates--;
     wash-=0.5;
     console.log("После",x++, "тарелки осталось",wash, "моющего средства");
